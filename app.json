@@ -1,0 +1,126 @@
+{ 
+  "name": "KING-VAJIRA-MD",
+  "description": "A Whatsapp md bot built By Naveed to make experience better",
+  "logo": "https://telegra.ph/file/09ab24679fb3a297a8905.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "King-Two", "KING-MD", "KING","king-Bot","theme bot","multi device","baileys"],
+  "success_url": "/",
+  "stack": "container",
+"env": {
+  "OWNER_NAME": {
+  "description": "OWNER NAME",
+      "value": "VAJIRA RATHNAYAKA"
+  },
+  "ALIVE_MESSAGE": {
+    "description": " SET YOUR ALIVE MESSAGE FOR THE BOT",
+     "required" :true
+    },
+  "AUTO_READ_STATUS": {
+    "description": "Fill the value true if you want bot view your Statuses./ ඔටො ඉස්ටෙටස් සීන් කරන්න ඔනිනම් true/false දමන්න",
+    "required" :false,
+    "value": "false"
+      },
+    "HEROKU_API_KEY": {
+    "description": "Put HEROKU API KEY/ හෙරෝකු සෙටිංස් වෙත ගොස් හෙරෝකු Api එක මෙතනට දමන්න",
+     "required" :true
+    },
+  "HEROKU_APP_NAME": {
+    "description": "Put HEROKU APP NAME same as above./ මුලින්ම දැමු නම නැවත්තත් මෙතනට දමන්න(App name)",
+     "required" :true
+    },
+   "THUMB_IMAGE": {
+    "description": "Put Your Image Url for bot./ බොට්ට පින්තුරයක් දැමීමට ඔබෙ පින්තුරෙ url එක දමන්න",
+     "value": "https://telegra.ph/file/09ab24679fb3a297a8905.jpg"
+    },
+    "ANTI_BAD_WORD": {
+    "description": "Put words here. If you want it enabled in your bot otherwise leave it blank",
+     "required" :false
+    },
+   "ANTILINK_VALUES": {
+    "description": "Put words for antilink/ අනවශ්‍ය ලින්ක් දැමීමෙන වැලකීමට",
+     "value": "chat.whatsapp.com",
+     "required" :false
+     },
+   "FAKE_COUNTRY_CODE": {
+    "description": "Put the Country Code Name without +/ වියාජ රටෙහි කෝඩ් එක දමන්න",
+     "value": "212",
+     "required" :false
+    },
+     "ANTILINK_ACTION": {
+    "description": "Put action for antilink",
+     "value": "remove",
+     "required" :false
+    },
+  "LEVEL_UP_MESSAGE": {
+    "description": "Fill the value true if you want bot send Level up message in chat./ levelup මැසෙජ් එක ඔටො යැවීමට true/false",
+     "required" :false,
+     "value": "false"
+    },
+      "READ_MESSAGE": {
+    "description": "Fill the value true if you want bot to read all messages./ හැම මැසේජ් එකක්ම ඔටෝ සීන් කිරිමට true/false",
+     "required" :false,
+     "value": "true"
+    },
+    "DISABLE_PM": {
+      "description": "Disable bot in pm",
+      "value": "false",
+      "required" :false
+    },
+      "PREFIX": {
+  "description": "Enter your desired prefix for bot./ බොට්ග්‍ර කමාන්ඩ් එක(prefix)",
+      "value": "."
+  },
+  "OWNER_NUMBER": {
+    "description": "The phone numbers of the users who you want to be admin for the bot/ තමන්ගෙ නම්බ එක (should be in international format without + and multiple numbers must be separated by a comma \",\")",
+       "value": "94Xxxxxxxxxx"
+  },
+   "SESSION_ID": {
+    "description": "Please put your Session ID that u scanned from the bot.... If u haven't scanned go to KING-MD Github Repo U can find the Scanner Option"
+  },
+    "OPENAI_API_KEY": {
+    "description": "Please put your OPENAI api key here.Get it from beta.openai.com(optional if u don't wan't then don't put it ",
+       "value": "ADD A OPEN AI KEY",
+       "required" :false
+  },
+  "MONGODB_URI": {
+    "description": "A secret String for Mongodb Connection.(Required),change for better experience",
+    "value": "mongodb://uwrr2obvrb4kbwnrvimy:rbgieh8nfk7EylXCh2D@byg4ii8uzy5rro8bcdfu-mongodb.services.clever-cloud.com:2008/byg4ii8uzy5rro8bcdfu"
+  },
+    "THEME": {
+    "description": "Don't Change . No Need To Change Only Avilable King-Vajira-Md./ මෙය වෙනස් කරන්න එපා",
+     "value": "KING-VAJIRA-MD"
+  },
+    "WORKTYPE": {
+  "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it./ඔබට විතරක් වැඩ කිරිමට false ලෙස හැමෝටම වැඩ කිරීමට true ලෙස දමන්න",
+         "value": "public"
+  },
+      "AUTO_REACTION": {
+    "description": "Reacts emoji to all commands./ හැම මැසෙජ් එකකටම ඔටො රියැක්ශන් එකක් වැටීමට true/false",
+     "value": "false",
+     "required": false 
+  },
+  "PACK_AUTHER": {
+    "description": "PUT STICKER AUTHOR NAME",
+    "value": "vajira"
+  },
+  "PACK_NAME": {
+    "description": "PUT STICKER PACK NAME",
+    "value": "king-vajira-md"
+  },
+  "heroku": {
+    "description": "Weather it is on heroku or not",
+     "value": "true",
+     "required": false   
+  }
+},
+"formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	},
+"addons": [
+		{
+			"plan": "heroku-postgresql"
+		}
+	]
+}
